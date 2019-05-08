@@ -1,0 +1,70 @@
+/*전체 영역을 통틀어서 스타일 정의 */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400|Raleway:200,300,400,500,700,900);
+/*css문서에서도 외부내용 가져올 수 있음 */
+
+body {
+	margin: 0px;
+	font-family: "Raleway", Sans-serif;
+}
+
+a{ /*기본적인  색상*/
+	color: #000000; /*검은색*/
+	text-decoration: nones; /*밑줄 안생기게*/
+}
+a :hover{ /*a태그에 마우스가 올라갔을 때,*/
+	color: #bbbbbb; /*회색*/
+	text-decoration: none; /*밑줄 안생기게*/
+	cursor: pointer; /*커서를 포인터로 바꿔줌 : 현재 내가 선택하고 있는게 링크라는 걸 알려줌*/
+}
+
+/*내비게이션 영역 스타일*/
+.navbar-default{ /*배경색상*/
+	background-color: #ffffff;
+}
+.navbar-default	.navbar-brand { /*내비게이션 제목 색상*/
+	color: #000000;
+}
+.navbar-default	.navbar-brand :hover,
+.navbar-default	.navbar-brand :focus {/*네이게이션제목에 마우스를 올렸을 때, 포커스가 갈 떄*/
+	background-color: transparent;
+	color: #bbbbbb;
+}
+
+/*각각의 a태그에 마우스를 올리거나 포커스가 갈 때,*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus { /*현재 선택된 내비게이션 색상이벤트 ex)소개*/
+	color: white;
+	background-color: #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus { /*내비게이션 글자에 마우스를 올렸을 때*/
+	color: #bbbbbb;
+}
+
+/*각각의 a태그에 마우스를 올리거나 포커스가 갈 때,*/
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus { /*드랍다운이 열렸을 때, 마우스 색상 이벤트*/
+	color: #000000;
+	background-color: #ffffff;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li >a { /*내비게이션 기본색상, 크기*/
+	color: #000000; 
+	font-size: 10px;
+}
+
+/*웹사이트 크기를 줄였을 때, 마우스 올리면 색상이 변하지 않을 수 있음!*/
+/*이때는, 미디어쿼리를 이용해야함!*/
+@media (max-width: 767px){ /*해상도가 (767px보다) 작을 때, 아이템에 마우스를 올렸을 때*/
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a{
+		color: #ffffff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:focus{
+		color: #bbbbbb;
+	}
+}

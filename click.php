@@ -1,0 +1,1 @@
+<?php setCookie("popup_cookie", "done", time()+86400);?>
