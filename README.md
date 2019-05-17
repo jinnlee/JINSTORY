@@ -3,8 +3,9 @@
 JINSTORY는 php를 처음 공부하면서 제가 즐겨 찾는 사이트를 참고하여 만들어본 여성의류 쇼핑몰입니다.
 
 # 사용 기술
-* Language : PHP, html
+* Language : PHP
 * OS : CentOS
+* DB : MySQL
 * Server : Apache
 * Tool : PhpStorm
 
